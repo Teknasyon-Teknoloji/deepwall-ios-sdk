@@ -1,0 +1,150 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Ploutos
+import AdSupport
+import CommonCrypto
+import EventServiceProvider
+import Foundation
+import Moya
+import PersistenceKit
+@_exported import Ploutos
+import Swift
+public struct ErrorCodeConstants {
+}
+public struct HMAC {
+  public enum Algorithm {
+    case md5
+    case sha1
+    case sha224
+    case sha256
+    case sha384
+    case sha512
+    public static func == (a: HMAC.Algorithm, b: HMAC.Algorithm) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public static func hash(_ input: Swift.String, using algorithm: HMAC.Algorithm) -> Swift.String
+}
+public enum PLApiError : Swift.Error {
+  case unauthorized
+  case request(Swift.Error, response: Moya.Response?)
+  case decoding(Swift.Error, response: Moya.Response?)
+  case server(errorCode: Swift.Int?, errorMessage: Swift.String?, response: Moya.Response?)
+  case unknown(response: Moya.Response?)
+}
+public enum PLDateFormat : Swift.String {
+  case `default`
+  case display
+  case displayDate
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension PLDateFormat {
+  public var dateFormatter: Foundation.DateFormatter {
+    get
+  }
+}
+final public class Ploutos {
+  public static var shared: Ploutos
+  @objc deinit
+}
+extension Ploutos {
+  final public var userProperties: PloutosUserProperties? {
+    get
+  }
+  final public var appStoreReceipt: Swift.String? {
+    get
+  }
+  final public var advertisingIdentifier: Swift.String? {
+    get
+  }
+}
+extension Ploutos {
+  public static func initialize(apiKey: Swift.String, environment: PloutosEnvironment)
+  final public func setUserProperties(_ props: PloutosUserProperties)
+  final public func updateUserProperties(country: Swift.String? = nil, language: Swift.String? = nil, advertiseAttributions: [Swift.String]? = nil)
+  final public func registerDevice(completion: ((Swift.Result<Swift.Bool, PLApiError>) -> Swift.Void)? = nil)
+  final public func validateReceipt(for type: PloutosValidationType, applicationId: Swift.Int? = nil, testPageId: Swift.Int? = nil)
+}
+public enum PloutosEnvironment {
+  case sandbox
+  case production
+  public static func == (a: PloutosEnvironment, b: PloutosEnvironment) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+final public class PloutosNotifierHub : EventServiceProvider.EventNotifierHub {
+  @objc deinit
+}
+extension NotifierEvents {
+  public static let validateReceiptResult: EventServiceProvider.NotifierEvent<PloutosValidateReceiptResult>
+  public static let validateReceiptFailed: EventServiceProvider.NotifierEvent<PloutosValidateReceiptFailed>
+}
+public struct PloutosValidateReceiptResult {
+  public let type: PloutosValidationType
+  public let result: PurchaseResponse?
+}
+public struct PloutosValidateReceiptFailed {
+  public let type: PloutosValidationType
+  public let errorCode: Swift.String
+  public let reason: Swift.String
+}
+final public class PloutosUserProperties {
+  public init(uuid: Swift.String, country: Swift.String? = nil, language: Swift.String? = nil, adjustId: Swift.String? = nil, advertiseAttributions: [Swift.String]? = nil)
+  @objc deinit
+}
+public enum PloutosValidationType {
+  case purchase
+  case restore
+  case automatic
+  public static func == (a: PloutosValidationType, b: PloutosValidationType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct ProductItem : Swift.Codable {
+  public let id: Swift.Int
+  public let storeOrderId: Swift.String
+  public let productCode: Swift.String
+  public let cancellationDateTime: Swift.String?
+  public let isRefunded: Swift.Bool
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct PurchaseResponse : Swift.Codable {
+  public let subscriptions: [SubscriptionItem]
+  public let products: [ProductItem]
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SubscriptionItem : Swift.Codable {
+  public let id: Swift.Int
+  public let storeOrderId: Swift.String
+  public let productCode: Swift.String
+  public let expiresDateTime: Swift.String
+  public let cancellationDateTime: Swift.String?
+  public let isRefunded: Swift.Bool
+  public let isActive: Swift.Bool
+  public let inTrialPeriod: Swift.Bool
+  public let inGracePeriod: Swift.Bool
+  public let inPremiumPeriod: Swift.Bool
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension HMAC.Algorithm : Swift.Equatable {}
+extension HMAC.Algorithm : Swift.Hashable {}
+extension PLDateFormat : Swift.Equatable {}
+extension PLDateFormat : Swift.Hashable {}
+extension PLDateFormat : Swift.RawRepresentable {}
+extension PloutosEnvironment : Swift.Equatable {}
+extension PloutosEnvironment : Swift.Hashable {}
+extension PloutosValidationType : Swift.Equatable {}
+extension PloutosValidationType : Swift.Hashable {}

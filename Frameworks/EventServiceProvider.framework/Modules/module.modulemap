@@ -1,0 +1,11 @@
+framework module EventServiceProvider {
+  umbrella header "EventServiceProvider-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module EventServiceProvider.Swift {
+    header "EventServiceProvider-Swift.h"
+    requires objc
+}

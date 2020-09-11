@@ -1,0 +1,224 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DeepWall
+import AdSupport
+import Adjust
+import AttributionAgent
+import CommonCrypto
+@_exported import DeepWall
+import DeviceInfoAgent
+import EventServiceProvider
+import Foundation
+import Gzip
+import LaraCrypt
+import Moya
+import Ploutos
+import PurchaseKit
+import React
+import StoreKit
+import Swift
+import UIKit
+public struct HMAC {
+  public enum Algorithm {
+    case md5
+    case sha1
+    case sha224
+    case sha256
+    case sha384
+    case sha512
+    public static func == (a: HMAC.Algorithm, b: HMAC.Algorithm) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public static func hash(_ input: Swift.String, using algorithm: HMAC.Algorithm) -> Swift.String
+}
+public typealias DeepWallExtraDataType = [Swift.String : Any]
+public typealias DeepWallReceiptValidationType = PloutosValidationType
+final public class DeepWall {
+  public static var shared: DeepWall
+  final public var enabled: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension DeepWall {
+  final public var currentLanguage: DeepWallLanguage {
+    get
+  }
+  final public var userProperties: DeepWallUserProperties? {
+    get
+  }
+  final public var readyStatus: Swift.Bool {
+    get
+  }
+  final public var advertisingIdentifier: Swift.String? {
+    get
+  }
+}
+extension DeepWall {
+  public static func initialize(apiKey: Swift.String, environment: DeepWallEnvironment)
+  final public func setUserProperties(_ props: DeepWallUserProperties)
+  final public func updateUserProperties(country: DeepWallCountry? = nil, language: DeepWallLanguage? = nil, environmentStyle: DeepWallEnvironmentStyle? = nil, debugAdvertiseAttributions: AAAdvertiseAttributions = nil)
+  final public func updateEnabled(_ enabled: Swift.Bool)
+  final public func closeLanding()
+  final public func hideLandingLoadingIndicator()
+  final public func requestLanding(action: Swift.String, in view: UIKit.UIViewController, extraData: DeepWallExtraDataType? = nil)
+  final public func validateReceipt(for type: DeepWallReceiptValidationType)
+}
+public enum DeepWallError {
+}
+public protocol DeepWallErrorH {
+  var errorCode: Swift.String { get }
+  var errorDescription: Swift.String { get }
+}
+final public class DeepWallUserProperties {
+  final public var country: DeepWallCountry
+  final public var language: DeepWallLanguage
+  public init(uuid: Swift.String, country: DeepWallCountry, language: DeepWallLanguage, environmentStyle: DeepWallEnvironmentStyle? = nil, debugAdvertiseAttributions: AAAdvertiseAttributions = nil)
+  @objc deinit
+}
+public enum EventListenerModelType : Swift.Int, Swift.Codable {
+  case alert
+  case close
+  case purchase
+  case restore
+  case extraData
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum DeepWallEventListenerToReactModelType : Swift.Int, Swift.Codable {
+  case purchaseFailed
+  case restoreFailed
+  case environmentStateChanged
+  case hideLoader
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+final public class DeepWallNotifierHub : EventServiceProvider.EventNotifierHub {
+  @objc deinit
+}
+extension NotifierEvents {
+  public static let landingRequestTimeout: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let landingRequestSent: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let landingResponseReceived: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let landingResponseSuccess: EventServiceProvider.NotifierEvent<PageApiResponse>
+  public static let landingResponseFailure: EventServiceProvider.NotifierEvent<DeepWallLandingResponseFailedModel>
+  public static let landingOpened: EventServiceProvider.NotifierEvent<DeepWallLandingOpenInfoModel>
+  public static let landingClosed: EventServiceProvider.NotifierEvent<DeepWallLandingOpenInfoModel>
+  public static let landingNotOpened: EventServiceProvider.NotifierEvent<DeepWallLandingNotOpenInfoModel>
+  public static let landingActionShowDisabled: EventServiceProvider.NotifierEvent<DeepWallLandingOpenInfoModel>
+  public static let landingPurchasingProduct: EventServiceProvider.NotifierEvent<DeepWallLandingPurchasingProduct>
+  public static let landingPurchaseSuccess: EventServiceProvider.NotifierEvent<PloutosValidateReceiptResult?>
+  public static let landingPurchaseFailed: EventServiceProvider.NotifierEvent<PurchaseFailedModel>
+  public static let landingRestoreSuccess: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let landingRestoreFailed: EventServiceProvider.NotifierEvent<RestoreFailedModel>
+  public static let landingExtraDataReceived: EventServiceProvider.NotifierEvent<DeepWallExtraDataType>
+}
+public struct DeepWallLandingResponseFailedModel : Swift.Encodable {
+  public let errorCode: Swift.String
+  public let reason: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeepWallLandingOpenInfoModel : Swift.Encodable {
+  public let pageId: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeepWallLandingNotOpenInfoModel : Swift.Encodable {
+  public let pageId: Swift.Int
+  public let reason: Swift.String
+  public let errorCode: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeepWallLandingPurchasingProduct : Swift.Encodable {
+  public let productCode: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum DWApiError : Swift.Error {
+  case unauthorized
+  case request(Swift.Error, response: Moya.Response?)
+  case decoding(Swift.Error, response: Moya.Response?)
+  case server(errorCode: Swift.Int?, errorMessage: Swift.String?, response: Moya.Response?)
+  case unknown(response: Moya.Response?)
+}
+public enum DeepWallEnvironment {
+  case sandbox
+  case production
+  public static func == (a: DeepWallEnvironment, b: DeepWallEnvironment) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol DeepWallCountry {
+  var rawValue: Swift.String { get }
+}
+public struct DeepWallCountryManager {
+  public static func getCountry(by code: Swift.String) -> DeepWallCountry
+}
+public enum DeepWallEnvironmentStyle : Swift.Int {
+  case automatic
+  case light
+  case dark
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+public class DictionaryDecoder {
+  @objc deinit
+}
+public protocol DeepWallLanguage {
+  var rawValue: Swift.String { get }
+}
+extension DeepWallLanguage {
+  public var code: Swift.String {
+    get
+  }
+}
+public struct DeepWallLanguageManager {
+  public static func getLanguage(by code: Swift.String) -> DeepWallLanguage
+}
+public enum DWDateFormat : Swift.String {
+  case `default`
+  case display
+  case displayDate
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DWDateFormat {
+  public var dateFormatter: Foundation.DateFormatter {
+    get
+  }
+}
+public struct PageApiResponse : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension HMAC.Algorithm : Swift.Equatable {}
+extension HMAC.Algorithm : Swift.Hashable {}
+extension EventListenerModelType : Swift.Equatable {}
+extension EventListenerModelType : Swift.Hashable {}
+extension EventListenerModelType : Swift.RawRepresentable {}
+extension DeepWallEventListenerToReactModelType : Swift.Equatable {}
+extension DeepWallEventListenerToReactModelType : Swift.Hashable {}
+extension DeepWallEventListenerToReactModelType : Swift.RawRepresentable {}
+extension DeepWallEnvironment : Swift.Equatable {}
+extension DeepWallEnvironment : Swift.Hashable {}
+extension DeepWallEnvironmentStyle : Swift.Equatable {}
+extension DeepWallEnvironmentStyle : Swift.Hashable {}
+extension DeepWallEnvironmentStyle : Swift.RawRepresentable {}
+extension DWDateFormat : Swift.Equatable {}
+extension DWDateFormat : Swift.Hashable {}
+extension DWDateFormat : Swift.RawRepresentable {}

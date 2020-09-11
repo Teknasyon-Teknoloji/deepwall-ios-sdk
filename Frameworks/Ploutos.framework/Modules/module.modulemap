@@ -1,0 +1,11 @@
+framework module Ploutos {
+  umbrella header "Ploutos-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Ploutos.Swift {
+    header "Ploutos-Swift.h"
+    requires objc
+}

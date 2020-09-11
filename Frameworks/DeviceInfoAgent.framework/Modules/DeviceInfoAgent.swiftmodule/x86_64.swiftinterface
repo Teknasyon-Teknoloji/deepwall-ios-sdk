@@ -1,0 +1,22 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DeviceInfoAgent
+@_exported import DeviceInfoAgent
+import Foundation
+import Moya
+import Swift
+import UIKit
+public typealias LocationService = [Swift.String : LocationServiceItem]
+public typealias LocationServiceItem = [Swift.String : Swift.String]
+final public class DeviceInfoAgent {
+  public static var shared: DeviceInfoAgent
+  final public var deviceInfoModel: DeviceInfoModel
+  final public var locationInfo: LocationService
+  final public func requestForIp(name: Swift.String, url: Foundation.URL, headers: [Swift.String : Swift.String], regexs: [Swift.String : Swift.String])
+  @objc deinit
+}
+public struct DeviceInfoModel {
+  public var modelId: Swift.String {
+    get
+  }
+}

@@ -1,0 +1,115 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PurchaseKit
+import EventServiceProvider
+import Foundation
+@_exported import PurchaseKit
+import StoreKit
+import Swift
+@objc final public class PurchaseKit : ObjectiveC.NSObject {
+  public static var shared: PurchaseKit
+  final public var status: PurchaseKitStatus {
+    get
+  }
+  final public var readyStatus: Swift.Bool {
+    get
+  }
+  final public var availableProducts: [StoreKit.SKProduct]
+  final public var canMakePayments: Swift.Bool {
+    get
+  }
+  final public var appStoreReceipt: Swift.String? {
+    get
+  }
+  final public var transactions: [StoreKit.SKPaymentTransaction] {
+    get
+  }
+  @objc deinit
+}
+extension PurchaseKit {
+  final public func fetchProducts(_ productCodes: [Swift.String])
+  final public func purchaseProduct(with productCode: Swift.String)
+  final public func restorePurchases()
+  final public func finishTransaction(for productId: Swift.String)
+  final public func enableSDKTemporary()
+  final public func disableSDKTemporary()
+  final public func skipProductFetch()
+}
+extension PurchaseKit : StoreKit.SKProductsRequestDelegate {
+  @objc final public func requestDidFinish(_ request: StoreKit.SKRequest)
+  @objc final public func productsRequest(_ request: StoreKit.SKProductsRequest, didReceive response: StoreKit.SKProductsResponse)
+  @objc final public func request(_ request: StoreKit.SKRequest, didFailWithError error: Swift.Error)
+}
+extension PurchaseKit : StoreKit.SKPaymentTransactionObserver {
+  @objc final public func paymentQueue(_ queue: StoreKit.SKPaymentQueue, updatedTransactions transactions: [StoreKit.SKPaymentTransaction])
+  @objc final public func paymentQueueRestoreCompletedTransactionsFinished(_ queue: StoreKit.SKPaymentQueue)
+  @objc final public func paymentQueue(_ queue: StoreKit.SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Swift.Error)
+}
+public struct ProductFetchFailedModel : Swift.Encodable {
+  public let reason: Swift.String
+  public let errorCode: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct PurchaseFailedModel : Swift.Encodable {
+  public let productCode: Swift.String
+  public let reason: Swift.String
+  public let errorCode: Swift.String
+  public var isPaymentCancelled: Swift.Bool {
+    get
+  }
+  public init(productCode: Swift.String, reason: Swift.String, errorCode: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum RestoreFailedReason : Swift.Int, Swift.Encodable {
+  case noReceipt
+  case failed
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct RestoreFailedModel : Swift.Encodable {
+  public let reason: RestoreFailedReason
+  public let errorCode: Swift.String
+  public let errorText: Swift.String?
+  public var isPaymentCancelled: Swift.Bool {
+    get
+  }
+  public init(reason: RestoreFailedReason, errorCode: Swift.String, errorText: Swift.String? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct PurchasingProductModel : Swift.Encodable {
+  public let productCode: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension NotifierEvents {
+  public static let productsFetched: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let productFetchFailed: EventServiceProvider.NotifierEvent<ProductFetchFailedModel>
+  public static let purchasingProduct: EventServiceProvider.NotifierEvent<PurchasingProductModel>
+  public static let purchaseSuccess: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let purchaseFailed: EventServiceProvider.NotifierEvent<PurchaseFailedModel>
+  public static let restoreSuccess: EventServiceProvider.NotifierEvent<EventServiceProvider.ESPNull>
+  public static let restoreFailed: EventServiceProvider.NotifierEvent<RestoreFailedModel>
+}
+final public class PurchaseKitNotifierHub : EventServiceProvider.EventNotifierHub {
+  @objc deinit
+}
+public enum PurchaseKitStatus : Swift.String {
+  case initialized
+  case productsRequested
+  case productsFetched
+  case productsFetchFailed
+  case noProductAvailable
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension RestoreFailedReason : Swift.Equatable {}
+extension RestoreFailedReason : Swift.Hashable {}
+extension RestoreFailedReason : Swift.RawRepresentable {}
+extension PurchaseKitStatus : Swift.Equatable {}
+extension PurchaseKitStatus : Swift.Hashable {}
+extension PurchaseKitStatus : Swift.RawRepresentable {}

@@ -1,0 +1,11 @@
+framework module DeviceInfoAgent {
+  umbrella header "DeviceInfoAgent-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DeviceInfoAgent.Swift {
+    header "DeviceInfoAgent-Swift.h"
+    requires objc
+}

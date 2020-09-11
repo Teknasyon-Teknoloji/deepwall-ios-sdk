@@ -1,0 +1,98 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AttributionAgent
+import Adjust
+@_exported import AttributionAgent
+import EventServiceProvider
+import Foundation
+import Swift
+public typealias AAAdvertiseAttributions = [Swift.String]?
+final public class AttributionAgent {
+  public static var shared: AttributionAgent
+  final public var readyStatus: Swift.Bool {
+    get
+  }
+  final public func prepare(configs: [AttributionAgentConfig])
+  final public var retrievedAttributes: [AttributionAgentInfo] {
+    get
+  }
+  @objc deinit
+}
+public struct AttributionAgentAdjustConfig : AttributionAgentConfig {
+  public let sourceType: AttributionRetrieveSource
+  public let token: Swift.String
+  public init(token: Swift.String)
+}
+@objc final public class AttributionAgentAdjustModule : ObjectiveC.NSObject, AttributionModuleBase {
+  final public var config: AttributionAgentConfig
+  final public func prepare()
+  final public var status: AttributionRetrieveStatus {
+    get
+  }
+  final public var attribution: Swift.String? {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AttributionAgentAdjustModule : AdjustDelegate {
+  @objc final public func adjustAttributionChanged(_ attribution: ADJAttribution?)
+}
+public protocol AttributionAgentConfig {
+  var sourceType: AttributionRetrieveSource { get }
+  var token: Swift.String { get }
+}
+public struct AttributionAgentInfo {
+  public let sourceType: AttributionRetrieveSource
+  public let attribution: Swift.String
+}
+extension NotifierEvents {
+  public static let referralsAttributionChanged: EventServiceProvider.NotifierEvent<ReferralsAttributionChangedInfo>
+}
+final public class AttributionAgentNotifierHub : EventServiceProvider.EventNotifierHub {
+  @objc deinit
+}
+public struct ReferralsAttributionChangedInfo : Swift.Encodable {
+  public let source: AttributionRetrieveSource
+  public let attribution: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol AttributionModuleBase {
+  var config: AttributionAgentConfig { get set }
+  var status: AttributionRetrieveStatus { get }
+  var attribution: Swift.String? { get }
+  func prepare()
+  func attributionChanged()
+}
+extension AttributionModuleBase {
+  public func attributionChanged()
+}
+public enum AttributionRetrieveSource : Swift.Int, Swift.Codable {
+  case adjust
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension AttributionRetrieveSource {
+  public var sourceName: Swift.String {
+    get
+  }
+}
+public enum AttributionRetrieveStatus {
+  case notset
+  case prepared
+  case retrieving
+  case retrieved
+  public static func == (a: AttributionRetrieveStatus, b: AttributionRetrieveStatus) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension AttributionRetrieveSource : Swift.Equatable {}
+extension AttributionRetrieveSource : Swift.Hashable {}
+extension AttributionRetrieveSource : Swift.RawRepresentable {}
+extension AttributionRetrieveStatus : Swift.Equatable {}
+extension AttributionRetrieveStatus : Swift.Hashable {}
