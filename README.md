@@ -42,7 +42,7 @@ let environment: DeepWallEnvironment = .sandbox
 DeepWall.initialize(apiKey: yourApiKey, environment: environment)
 ```
 
-Replace `{YOUR_API_KEY}` with your app token. You can find this key in your [dashboard](https://console.deepwall.com/login).
+Replace `{YOUR_API_KEY}` with your app token. You can find this key in your [dashboard](https://console.deepwall.com).
 
 Depending on whether you build your app for testing or for production, you must set environment with one of these values:
 
@@ -107,7 +107,20 @@ You could use `requestLanding` method with `action` parameter for showing landin
 
 DeepWall.shared.requestLanding(action: "{ACTION_KEY}", in: self)
 ```
-Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [‎dashboard](https://console.deepwall.com/login).
+Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [‎dashboard](https://console.deepwall.com).
+
+#### Sending Extra Data
+
+You could also use `extraData`parameter for sending extra data to landing pages.
+
+```swift
+// SomeUIViewController.swift
+
+let deepwallExtraData: DeepWallExtraDataType = [
+    "some": "value"
+]
+DeepWall.shared.requestLanding(action: "{ACTION_KEY}", in: self, extraData: deepwallExtraData)
+```
 
 ### Closing Landing Page
 
@@ -173,6 +186,11 @@ DeepWall posts some various events depending on ....
 		- errorCode: `String`
 		- errorText: `String?`
 		- isPaymentCancelled: `Bool`
+		
+- `.landingExtraDataReceived`
+	- Extra data received event
+	- Parameters:
+		- DeepWallExtraDataType model
 
 #### Usage Example
 
@@ -187,6 +205,7 @@ DeepWallNotifierHub.observe(.landingPurchasingProduct) { model in
 - iOS 10.0+
 - Xcode 11.0+
 - Swift 5.0+
+- Bitcode feature should be disabled
 
 ## Additional Features
 
