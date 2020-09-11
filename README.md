@@ -21,7 +21,6 @@ DeepWall is available through CocoaPods. To install it, add the following lines 
 1. Add DeepWall pod.
 
 ```rb
-source 'https://bitbucket.org/teknasyonteknoloji/ares-pods.git'
 use_frameworks!
 
 pod 'DeepWall'
