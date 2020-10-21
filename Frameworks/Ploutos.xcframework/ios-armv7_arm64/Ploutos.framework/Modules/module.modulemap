@@ -1,0 +1,6 @@
+framework module Ploutos {
+  umbrella header "Ploutos.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module EventServiceProvider {
+  umbrella header "EventServiceProvider.h"
+
+  export *
+  module * { export * }
+}
