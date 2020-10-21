@@ -1,0 +1,6 @@
+framework module AttributionAgent {
+  umbrella header "AttributionAgent.h"
+
+  export *
+  module * { export * }
+}

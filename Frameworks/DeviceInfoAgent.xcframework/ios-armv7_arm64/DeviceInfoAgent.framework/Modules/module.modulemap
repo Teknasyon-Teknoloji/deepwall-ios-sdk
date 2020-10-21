@@ -1,0 +1,6 @@
+framework module DeviceInfoAgent {
+  umbrella header "DeviceInfoAgent.h"
+
+  export *
+  module * { export * }
+}

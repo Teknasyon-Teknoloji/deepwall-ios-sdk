@@ -1,12 +1,10 @@
-
-
 # DeepWall
 
 [![Platform](https://img.shields.io/cocoapods/p/DeepWall)](https://cocoapods.org/pods/deepwall)
 [![Cocoapods](https://img.shields.io/cocoapods/v/DeepWall)](https://cocoapods.org/pods/deepwall)
 
 
-DeepWall is a microservice that makes it easy to manage landing page screens of your application.
+End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases.
 
 
 ## Installation
@@ -68,7 +66,7 @@ DeepWall need to know following user properties for targeting.
 	- Two-letter language code -- [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 	- Usage: `DeepWallLanguageManager.getLanguage(by: "tr") // TURKISH`
 - Environment Style: `DeepWallEnvironmentStyle`
-	- Environment style for landing page appearance.
+	- Environment style for paywall appearance.
 	- Values:
 		- `automatic`: Uses system appearance (Default)
 		- `light`: Light appearance
@@ -78,7 +76,7 @@ DeepWall need to know following user properties for targeting.
 	 - Usage: `let attribution = ["debug_attribution", "debug_campaign_attribution"]`
 
 **Important:**
-> You must call `setUserProperties` method before requesting any landing page.
+> You must call `setUserProperties` method before requesting any paywall.
 ```swift
 let userProperties = DeepWallUserProperties(uuid: uuid, country: country, language: language, debugAdvertiseAttributions: debugAttributions)
 
@@ -96,21 +94,21 @@ func updateUserProperties(country: DeepWallCountry? = nil,
 			  debugAdvertiseAttributions: DeepWallAdvertiseAttributions = nil)
 ```
 
-### Requesting Landing Page
+### Requesting Paywall
 
 For pages to be displayed successfully, it is strongly recommended to wait for ```DeepWall.shared.readyStatus``` before sending a page request.
 
-You could use `requestLanding` method with `action` parameter for showing landing pages.
+You could use `requestPaywall` method with `action` parameter for showing paywalls.
 ```swift
 // SomeUIViewController.swift
 
-DeepWall.shared.requestLanding(action: "{ACTION_KEY}", in: self)
+DeepWall.shared.requestPaywall(action: "{ACTION_KEY}", in: self)
 ```
 Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [‎dashboard](https://console.deepwall.com).
 
 #### Sending Extra Data
 
-You could also use `extraData`parameter for sending extra data to landing pages.
+You could also use `extraData`parameter for sending extra data to paywalls.
 
 ```swift
 // SomeUIViewController.swift
@@ -118,54 +116,67 @@ You could also use `extraData`parameter for sending extra data to landing pages.
 let deepwallExtraData: DeepWallExtraDataType = [
     "some": "value"
 ]
-DeepWall.shared.requestLanding(action: "{ACTION_KEY}", in: self, extraData: deepwallExtraData)
+DeepWall.shared.requestPaywall(action: "{ACTION_KEY}", in: self, extraData: deepwallExtraData)
 ```
 
-### Closing Landing Page
+### Closing Paywall
 
-You could use `closeLanding` method to close landing pages.
+You could use `closePaywall` method to close paywalls.
 
 ```swift
-DeepWall.shared.closeLanding()
+DeepWall.shared.closePaywall()
 ```
 
 ### Event Handling
 
 DeepWall posts some various events depending on ....
 
--  `.landingOpened`
-	- Landing opened event
-	- Parameters:
-		- pageId: `Int`
-		
--	`.landingClosed`
-	- Landing closed event
+- `deepWallPaywallRequested`
+	- Fired after paywall requested. Useful for displaying loading indicator in your app.
+
+- `deepWallPaywallResponseReceived`
+	- Fired after paywall response received. Useful for hiding loading indicator in your app.
+
+- `deepWallPaywallOpened`
+	- Paywall opened event
 	- Parameters:
 		- pageId: `Int`
 
-- `.landingResponseFailure`
-	- Landing response failure event
+ - `deepWallPaywallNotOpened`
+	- Paywall not opened event. Fired on error cases only.
+	- Parameters:
+		- pageId: `Int`
+
+ - `deepWallPaywallActionShowDisabled`
+	- Paywall action show disabled event.
+		- Parameters:
+			- pageId: `Int`
+
+- `deepWallPaywallClosed`
+	- Paywall closed event
+	- Parameters:
+		- pageId: `Int`
+
+- `deepWallPaywallResponseFailure`
+	- Paywall response failure event
 	- Parameters:
 		- errorCode: `String`
 		- reason: `String`
-		
-- `.landingActionShowDisabled`
-	- Landing action show disabled event
-	- Parameters:
-		- pageId: `Int`
 
-- `.landingPurchasingProduct`
-	- Landing purchasing product event
+- `deepWallPaywallPurchasingProduct`
+	- Paywall purchasing product event
 	- Parameters:
 		- productCode: `String`
 
-- `.landingPurchaseSuccess`
+- `deepWallPaywallPurchaseSuccess`
 	- Purchase success event. *Fired after receipt validation if Ploutos service active.*
 	- Parameters:
-		- subscriptions: `Array of SubscriptionItem`
-		- products: `Array of ProductItem`
+		- type: `PloutosValidationType`
+		- result: `PLPurchaseResponse`
+			- subscriptions: `Array of SubscriptionItem`
+			- products: `Array of ProductItem`
 
-- `.landingPurchaseFailed`
+- `deepWallPaywallPurchaseFailed`
 	- Purchase failed event
 	- Parameters:
 		- productCode: `String`
@@ -173,10 +184,10 @@ DeepWall posts some various events depending on ....
 		- errorCode: `String`
 		- isPaymentCancelled: `Bool`
 
-- `.landingRestoreSuccess`
+- `deepWallPaywallRestoreSuccess`
 	- Restore success event
 
-- `.landingRestoreFailed`
+- `deepWallPaywallRestoreFailed`
 	- Restore failed event
 	- Parameters:
 		- reason: `RestoreFailedReason`
@@ -185,18 +196,23 @@ DeepWall posts some various events depending on ....
 		- errorCode: `String`
 		- errorText: `String?`
 		- isPaymentCancelled: `Bool`
-		
-- `.landingExtraDataReceived`
+
+- `deepWallPaywallExtraDataReceived`
 	- Extra data received event
 	- Parameters:
 		- DeepWallExtraDataType model
 
+
 #### Usage Example
 
+First implement `DeepWallNotifierDelegate` protocol to your class. Then you could use `observeEvents` method for observing events.
 ```swift
-DeepWallNotifierHub.observe(.landingPurchasingProduct) { model in
-	// Some code..
-}
+DeepWall.shared.observeEvents(for: self)
+```
+
+For removing observer, you could use `removeObserver` method.
+```swift
+DeepWall.shared.removeObserver(for: self)
 ```
 
 ## Requirements
@@ -204,7 +220,9 @@ DeepWallNotifierHub.observe(.landingPurchasingProduct) { model in
 - iOS 10.0+
 - Xcode 11.0+
 - Swift 5.0+
-- Bitcode feature should be disabled
+
+## Migration Guides
+- [DeepWall 2.0 Migration Guide](https://github.com/Teknasyon-Teknoloji/deepwall-ios-sdk/wiki/DeepWall-2.0-Migration-Guide)
 
 ## Additional Features
 
