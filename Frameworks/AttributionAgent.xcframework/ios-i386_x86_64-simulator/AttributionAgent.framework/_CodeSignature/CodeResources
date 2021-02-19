@@ -10,11 +10,15 @@
 		</data>
 		<key>Headers/AttributionAgent.h</key>
 		<data>
-		9zKSbhU2ZwdhEaNNpqLMnWCkMDk=
+		8tHcZaIA+d3AUTzZfr8s8bKbWjo=
 		</data>
 		<key>Headers/AttributionAgentAdjustConfig.h</key>
 		<data>
 		fXCmcekbV6fC63QcBrTi+72uhHE=
+		</data>
+		<key>Headers/AttributionAgentAppsFlyerConfig.h</key>
+		<data>
+		UA7eeQuQmLj6IItDkMuAFp9PuEA=
 		</data>
 		<key>Headers/AttributionAgentConfig.h</key>
 		<data>
@@ -22,7 +26,7 @@
 		</data>
 		<key>Headers/AttributionAgentCore.h</key>
 		<data>
-		k9cMnqhGYNsG/1vMQLivaARw7Rw=
+		uvRuO+UEWhK7lvFao9AgZwUEK0o=
 		</data>
 		<key>Headers/AttributionAgentInfo.h</key>
 		<data>
@@ -31,6 +35,10 @@
 		<key>Headers/AttributionAgentNotifierDelegate.h</key>
 		<data>
 		bVNEWkp73SCtCOj4wgCL6Kjilxw=
+		</data>
+		<key>Headers/AttributionAgentTrackerInfo.h</key>
+		<data>
+		lyGfJKBeG5KLJ+avD44hPIjnacY=
 		</data>
 		<key>Headers/AttributionRetrieveSource.h</key>
 		<data>
@@ -42,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Z+gO1qlWT7kt0xTv5FhsRIQTtQM=
+		CshY0peErjpzpc0/zsAstjDy6JQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,11 +74,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9zKSbhU2ZwdhEaNNpqLMnWCkMDk=
+			8tHcZaIA+d3AUTzZfr8s8bKbWjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zTB/2CfHVKolS2gu2h7vNZcmZndrdb8KvJfTF6MTLho=
+			ZkDIfyoHPAHkMmfni3p83teqUWDl/gYJJB9mVocz7zM=
 			</data>
 		</dict>
 		<key>Headers/AttributionAgentAdjustConfig.h</key>
@@ -82,6 +90,17 @@
 			<key>hash2</key>
 			<data>
 			W+/IgV4bdbviyo/P5BVt+QH/KjZb10XqkFHwGZ7oMWM=
+			</data>
+		</dict>
+		<key>Headers/AttributionAgentAppsFlyerConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UA7eeQuQmLj6IItDkMuAFp9PuEA=
+			</data>
+			<key>hash2</key>
+			<data>
+			PLp3tlOVQN4b2awdgPhp0ZFJCwniaebEg8JllDj7YLk=
 			</data>
 		</dict>
 		<key>Headers/AttributionAgentConfig.h</key>
@@ -99,11 +118,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k9cMnqhGYNsG/1vMQLivaARw7Rw=
+			uvRuO+UEWhK7lvFao9AgZwUEK0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			cizhJ4lCIJyMKdyksvXIyRw32Z9V3zZRzzcAi4vFM5U=
+			7a/C1jxaQ1pQEJBJESnzkSrkmTYrda9IBO4ikvqGbCY=
 			</data>
 		</dict>
 		<key>Headers/AttributionAgentInfo.h</key>
@@ -126,6 +145,17 @@
 			<key>hash2</key>
 			<data>
 			N6uoZEtOug9GRWnETctdIZAuqeW+XnLGD7fjk+3hv9A=
+			</data>
+		</dict>
+		<key>Headers/AttributionAgentTrackerInfo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lyGfJKBeG5KLJ+avD44hPIjnacY=
+			</data>
+			<key>hash2</key>
+			<data>
+			HOnvskz1wWj6IDkR+giSSDvXYZGxjktDs7OYVhCxlQg=
 			</data>
 		</dict>
 		<key>Headers/AttributionRetrieveSource.h</key>

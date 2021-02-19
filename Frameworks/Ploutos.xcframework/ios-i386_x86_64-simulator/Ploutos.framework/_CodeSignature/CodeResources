@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/PLProductItem.h</key>
 		<data>
-		V0uCyRCfX64VZ/UU9oycc9E2lN4=
+		yVTqN2ZGFxT31lETK4CgXJGHzPg=
 		</data>
 		<key>Headers/PLPurchaseResponse.h</key>
 		<data>
-		zHfSw+9TsW0FZhy6Mwi5InZOKsY=
+		9mn6sj3pyeGfe4s5Q/X5vs8G1Vg=
 		</data>
 		<key>Headers/PLSubscriptionItem.h</key>
 		<data>
-		cZpi8RBPBzZyEphpw9eaoCj2qCk=
+		2DztH9sRvc2bo64GTYw1rEnOahg=
 		</data>
 		<key>Headers/Ploutos.h</key>
 		<data>
-		6dwUNqlIqvSkuLxZndEO+Y/bHvI=
+		TXoaEWRQky0XiN19mq07ZxqZxa4=
 		</data>
 		<key>Headers/PloutosConfig.h</key>
 		<data>
-		/pvzoDROOfBioYh1AHsgBV5HqIs=
+		glUnx9vh34Wy5XzsID0tQLVowqQ=
 		</data>
 		<key>Headers/PloutosCore.h</key>
 		<data>
-		H5v1M4h/A+DbIsMbTtrJmUQyrtY=
+		6s0lePUbHlLRqR2ENEu2J+8x0hg=
 		</data>
 		<key>Headers/PloutosEnvironment.h</key>
 		<data>
@@ -34,19 +34,23 @@
 		</data>
 		<key>Headers/PloutosNotifierDelegate.h</key>
 		<data>
-		oCcfscIZ3pQPVpbJsOVVLclNlsA=
+		0K+lEB3pa35nDc1Y8O5dA1zA6Ps=
+		</data>
+		<key>Headers/PloutosProvider.h</key>
+		<data>
+		DECPgqFahqFHJB2fPUICK+lTxEY=
 		</data>
 		<key>Headers/PloutosUserProperties.h</key>
 		<data>
-		GDlRmANAYMe/7wXO196HT3bxvUI=
+		lQPmXZn0qYWKsQ+E9DJwvD9N7X8=
 		</data>
 		<key>Headers/PloutosValidateReceiptFailed.h</key>
 		<data>
-		AGGuRVEkzzWLTxuHT3qFCiAXo/Q=
+		uCJ7JqmLwciWAp+MEy4dZUbaZKY=
 		</data>
 		<key>Headers/PloutosValidateReceiptResult.h</key>
 		<data>
-		4PTKnuAJiIp1hCokLpgAKsJQo2s=
+		ZdnVgXbhi2OaONewiZz0SACIeEw=
 		</data>
 		<key>Headers/PloutosValidationType.h</key>
 		<data>
@@ -54,7 +58,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DaFVFbvKtVBp4RRNV3opdnxHulA=
+		Uph3oNYq1a19jGDOMApNG/DUAZA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,66 +71,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			V0uCyRCfX64VZ/UU9oycc9E2lN4=
+			yVTqN2ZGFxT31lETK4CgXJGHzPg=
 			</data>
 			<key>hash2</key>
 			<data>
-			lvtx+itRUzaee4txvPzk5fQMdwXVDujK0+D7etuVRBg=
+			i6WgLB7EQ8ZAPCOz9IeuWSg3LLRkwFxeY0TqfawOQUQ=
 			</data>
 		</dict>
 		<key>Headers/PLPurchaseResponse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zHfSw+9TsW0FZhy6Mwi5InZOKsY=
+			9mn6sj3pyeGfe4s5Q/X5vs8G1Vg=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGW4pF7xmCVBIJHddlZWBrFKLOU4ASy5g1JW38TwAoA=
+			kvPeAx2J8GzkSS2PWBzs0wKIKdy95n3xpxXgOePtfmA=
 			</data>
 		</dict>
 		<key>Headers/PLSubscriptionItem.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cZpi8RBPBzZyEphpw9eaoCj2qCk=
+			2DztH9sRvc2bo64GTYw1rEnOahg=
 			</data>
 			<key>hash2</key>
 			<data>
-			T1DQzfFR6I3MpTWohuZGzA47WcJEOufNQ8x0yTW0l40=
+			X0/NrxHu7RNxgKWckVSRjJDzLNtr+TjkWJ5ALvKFjZg=
 			</data>
 		</dict>
 		<key>Headers/Ploutos.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6dwUNqlIqvSkuLxZndEO+Y/bHvI=
+			TXoaEWRQky0XiN19mq07ZxqZxa4=
 			</data>
 			<key>hash2</key>
 			<data>
-			eYi+1K3w02i3TPpbeNrMho+Smr71AcyR+UCA2kn3+OM=
+			2oPcZ3lCMU6Omy8pB2Q4M71ez1jNYXlck3r31k2+dpA=
 			</data>
 		</dict>
 		<key>Headers/PloutosConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/pvzoDROOfBioYh1AHsgBV5HqIs=
+			glUnx9vh34Wy5XzsID0tQLVowqQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			SmXKPIHO+h39DiHH+PZ4bFOQ93UK16HGCl5jPvfVJZE=
+			yDCA0XH+cOllylU+I+GEyGMh9RNaMQUmWKjdlcuVarw=
 			</data>
 		</dict>
 		<key>Headers/PloutosCore.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H5v1M4h/A+DbIsMbTtrJmUQyrtY=
+			6s0lePUbHlLRqR2ENEu2J+8x0hg=
 			</data>
 			<key>hash2</key>
 			<data>
-			0I44hFyCZpgpOr3azmf0+k0DvuFuTud4yOnzrlK5BEk=
+			4nt5t72qpXIPZXy8lYlT+4e12XcXNVPUQcoNQMyKy64=
 			</data>
 		</dict>
 		<key>Headers/PloutosEnvironment.h</key>
@@ -144,44 +148,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oCcfscIZ3pQPVpbJsOVVLclNlsA=
+			0K+lEB3pa35nDc1Y8O5dA1zA6Ps=
 			</data>
 			<key>hash2</key>
 			<data>
-			QhBWGqU2pmdkpxEWnsNk2Ovwc3RzclRgJhiU94FUoRA=
+			q5+QpDLudIZt/uhEbBOIx25wPvqu/EF+kYQtH5HMeBw=
+			</data>
+		</dict>
+		<key>Headers/PloutosProvider.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DECPgqFahqFHJB2fPUICK+lTxEY=
+			</data>
+			<key>hash2</key>
+			<data>
+			8X/X71ZGYn/jixWuuBxYQzpgfVTHWiZ2jVMnXP8Xcbc=
 			</data>
 		</dict>
 		<key>Headers/PloutosUserProperties.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GDlRmANAYMe/7wXO196HT3bxvUI=
+			lQPmXZn0qYWKsQ+E9DJwvD9N7X8=
 			</data>
 			<key>hash2</key>
 			<data>
-			UrR7gD3r1E+38XtQffYZxMEm+lljd894k9ghP94U5yY=
+			/def8a2K62pkJzgRJeIgFyQ/7bqXzwu1EshUw80rdjU=
 			</data>
 		</dict>
 		<key>Headers/PloutosValidateReceiptFailed.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AGGuRVEkzzWLTxuHT3qFCiAXo/Q=
+			uCJ7JqmLwciWAp+MEy4dZUbaZKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			fMGY+CC9IWdOirTotEz5Bc2ZZ/VGlMjDQvOK8yrf6+4=
+			V8xQnmhhTNBqx7AFcges+643uVV4Sh/yjeAA03C5JIg=
 			</data>
 		</dict>
 		<key>Headers/PloutosValidateReceiptResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4PTKnuAJiIp1hCokLpgAKsJQo2s=
+			ZdnVgXbhi2OaONewiZz0SACIeEw=
 			</data>
 			<key>hash2</key>
 			<data>
-			xRYeUQ9WEIziW3Cg9k4mql7Ky7ylTIW0obrM90EqUUU=
+			CKRwrIgXIE80MIT0iL9w/5n66p4GGGdmQXBNCb/H6MY=
 			</data>
 		</dict>
 		<key>Headers/PloutosValidationType.h</key>
