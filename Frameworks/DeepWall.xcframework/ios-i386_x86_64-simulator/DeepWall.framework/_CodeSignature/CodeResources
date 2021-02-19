@@ -6,19 +6,19 @@
 	<dict>
 		<key>Headers/DeepWall.h</key>
 		<data>
-		hgYQw375uZAu0Q86c4CJxJyC6AE=
+		UHNvnrwzLgTv45kE6ZNTUKJJtLc=
 		</data>
 		<key>Headers/DeepWallConfig.h</key>
 		<data>
-		ReUZ8Giac58xyHgyiPA2nGB1pu0=
+		yryKP0gVQVK1D6YNEbTta5tr4Ls=
 		</data>
 		<key>Headers/DeepWallCore.h</key>
 		<data>
-		HWJlctm0HcyKxHq1iUQgM+US2kE=
+		3jo+/f4itwDINgYdIZ3w6oUx7EI=
 		</data>
 		<key>Headers/DeepWallCountry.h</key>
 		<data>
-		oMtlZmGGCNVpIA8bqRuXNxmfWZs=
+		1mWiyX2JjVn7dKt6Kr66Sp47EPc=
 		</data>
 		<key>Headers/DeepWallEnvironment.h</key>
 		<data>
@@ -26,39 +26,39 @@
 		</data>
 		<key>Headers/DeepWallEnvironmentStyle.h</key>
 		<data>
-		fk+YfTrxDEBj+NcRUR1lWed3Y0o=
+		IERbl0x/rLXtXao5N8YLdB1Ci0I=
 		</data>
 		<key>Headers/DeepWallError.h</key>
 		<data>
-		vp6wroDKZWzR2CT8ZSDnRxU1AZw=
+		EEqVRuzvjRizpXjsOily7RTrayI=
 		</data>
 		<key>Headers/DeepWallLanguage.h</key>
 		<data>
-		F2OFsikTKV7ZEZVRkhu3WB0vI8Y=
+		0I06bsVmbQkjE9OmaiD5bWDb+Dc=
 		</data>
 		<key>Headers/DeepWallNotifier.h</key>
 		<data>
-		ik11Pm/Kb/EZpSParaEJb8KclBQ=
+		1eHXP9EgoYEYnUizFikj6y9Op84=
 		</data>
 		<key>Headers/DeepWallNotifierDelegate.h</key>
 		<data>
-		DBzcwaToxR6RsWanDT9zLodstaU=
+		oaYwWnrbYVH2jqACI2SQJjj17iU=
 		</data>
 		<key>Headers/DeepWallPaywallNotOpenedInfoModel.h</key>
 		<data>
-		UJZw+swu1e8clUe7gDakhQ9jkBg=
+		k8QHqEtTPovc4MJ/OLU8cd4b92c=
 		</data>
 		<key>Headers/DeepWallPaywallOpenedInfoModel.h</key>
 		<data>
-		vMU4/S7Fc/mjmUjKLQgZisksqBY=
+		H9T+z9xAkPT8FI/Y2mTU2VmWvpk=
 		</data>
 		<key>Headers/DeepWallPaywallPurchasingProduct.h</key>
 		<data>
-		H5sIls2uav8/H7pKeTIJiOicsRw=
+		MmkXR0grTtuF1xVqo86Y/rv2sH8=
 		</data>
 		<key>Headers/DeepWallPaywallResponseFailedModel.h</key>
 		<data>
-		dAge8gDPeUxPkLM/afOTGLCBc/I=
+		1p5p+RTCawaU7FYN2lbv3Re3peo=
 		</data>
 		<key>Headers/DeepWallReceiptValidationType.h</key>
 		<data>
@@ -66,11 +66,11 @@
 		</data>
 		<key>Headers/DeepWallUserProperties.h</key>
 		<data>
-		ny+JXSAAGpvDdZfYJBuYFDFNeeI=
+		/PDA8ofoL8CT/569INi170Ony5Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		M3/U99TNF8FUJhk+OVydu+1VrFs=
+		Y96sqeztCJFJxDU/45RwCbvUt8s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,44 +83,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hgYQw375uZAu0Q86c4CJxJyC6AE=
+			UHNvnrwzLgTv45kE6ZNTUKJJtLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			hd5+86kkePrCsgGlQyA7j/hupkLkzCjeB6ZF93Izt8Q=
+			KQhlTJFoTp584h+mbodIBjtesAT4jHVcwqDOLEhatu4=
 			</data>
 		</dict>
 		<key>Headers/DeepWallConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ReUZ8Giac58xyHgyiPA2nGB1pu0=
+			yryKP0gVQVK1D6YNEbTta5tr4Ls=
 			</data>
 			<key>hash2</key>
 			<data>
-			PT1qZ3/jfz6ofyrFwaZu7UT1RXkqsu3VfAHLGUapR0E=
+			dDw+xe9/USH26gSxJnaTvfloOGK9I/lIM9uNBM1w8Xg=
 			</data>
 		</dict>
 		<key>Headers/DeepWallCore.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HWJlctm0HcyKxHq1iUQgM+US2kE=
+			3jo+/f4itwDINgYdIZ3w6oUx7EI=
 			</data>
 			<key>hash2</key>
 			<data>
-			vEDNUxwmW2g/fAKOEG+kF6gZa5PPRAAL4Lj3cBtm4Kc=
+			m5iqVhKDkorhC+BQSSWLOQcSaDqoZ2tO3OsMjsTwf6g=
 			</data>
 		</dict>
 		<key>Headers/DeepWallCountry.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oMtlZmGGCNVpIA8bqRuXNxmfWZs=
+			1mWiyX2JjVn7dKt6Kr66Sp47EPc=
 			</data>
 			<key>hash2</key>
 			<data>
-			pYnuejB2p02DzPJ5oqUdCm2ZU9TJ/60HNcMMxmzanhw=
+			SHmD2S7AGfBm/LBzLFfAx5MQPtPfADXPAjE7jPQrgKk=
 			</data>
 		</dict>
 		<key>Headers/DeepWallEnvironment.h</key>
@@ -138,99 +138,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fk+YfTrxDEBj+NcRUR1lWed3Y0o=
+			IERbl0x/rLXtXao5N8YLdB1Ci0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			kmx9GJyP7JraAQ15618BW53QRu8XuKzM0//l2rZf6Fg=
+			vdTffc7m5el8OTzrAtUqRz5b5oHZumPNTeqFhVWOoj4=
 			</data>
 		</dict>
 		<key>Headers/DeepWallError.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vp6wroDKZWzR2CT8ZSDnRxU1AZw=
+			EEqVRuzvjRizpXjsOily7RTrayI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PVUS7TCsk875ss39/YMGcPJb+ihzscgAIfbuIxvoQew=
+			PLP2uHzB/5FxuxSLPaL3aFm/6bdXs9FkUSQLToOT/nQ=
 			</data>
 		</dict>
 		<key>Headers/DeepWallLanguage.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			F2OFsikTKV7ZEZVRkhu3WB0vI8Y=
+			0I06bsVmbQkjE9OmaiD5bWDb+Dc=
 			</data>
 			<key>hash2</key>
 			<data>
-			kZqrVo5LClzWlD0RdIA/TpQUgtmgICxq+NxUpRCwaHI=
+			9Yuw0UXo6NBkpEtLhqn6tlw4+oMWxB/O46EtFPXnmKw=
 			</data>
 		</dict>
 		<key>Headers/DeepWallNotifier.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ik11Pm/Kb/EZpSParaEJb8KclBQ=
+			1eHXP9EgoYEYnUizFikj6y9Op84=
 			</data>
 			<key>hash2</key>
 			<data>
-			B3RqmY3PosNCLnPQxdBvrjADurJ6/b57NQK80INkLhw=
+			SbTE41x5BY0wUQvRAEhIRmhBdkkxKgKdha9I7dHWBTc=
 			</data>
 		</dict>
 		<key>Headers/DeepWallNotifierDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DBzcwaToxR6RsWanDT9zLodstaU=
+			oaYwWnrbYVH2jqACI2SQJjj17iU=
 			</data>
 			<key>hash2</key>
 			<data>
-			dknW3QG7B4S0HmywwSqhPpokjZ118IlPDWt8AX/W1dc=
+			MB7hHdmSHzaf1VYe03tW+lej3V2koLUjo4/EI/m8/CQ=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallNotOpenedInfoModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UJZw+swu1e8clUe7gDakhQ9jkBg=
+			k8QHqEtTPovc4MJ/OLU8cd4b92c=
 			</data>
 			<key>hash2</key>
 			<data>
-			wKqUuy651yVf6zmXGimEJneStyZnWCWccfedrk7S5LY=
+			aagws5L+NpzArgZYdCjVnoWTG+w/RW/vGoMpXA7mi14=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallOpenedInfoModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vMU4/S7Fc/mjmUjKLQgZisksqBY=
+			H9T+z9xAkPT8FI/Y2mTU2VmWvpk=
 			</data>
 			<key>hash2</key>
 			<data>
-			0ASKnES929mfzZRVSXXZuMeM/4jB6nkn41QiFsuHs5Q=
+			U5siMQFNkWFJ0dxg/n/vsLjxPk/gjUWnPlmBhDV5Ejs=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallPurchasingProduct.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H5sIls2uav8/H7pKeTIJiOicsRw=
+			MmkXR0grTtuF1xVqo86Y/rv2sH8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ScHAoZwCIxk2YD4sLUHI7CYeiWqOBFLSQv2gTbD58MY=
+			rjbueKDFIyxQ3R7qDjfjLkBW3jU0vI1yTzuBnK2pfEk=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallResponseFailedModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dAge8gDPeUxPkLM/afOTGLCBc/I=
+			1p5p+RTCawaU7FYN2lbv3Re3peo=
 			</data>
 			<key>hash2</key>
 			<data>
-			A95WJMhyggV4NE4PPGrz0qO6qGIdnyLURFKdFLfdGn0=
+			eQiF/1AmHtcvmf6R8mQBITSax05mBlDuOJ3ZxFY2mls=
 			</data>
 		</dict>
 		<key>Headers/DeepWallReceiptValidationType.h</key>
@@ -248,11 +248,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ny+JXSAAGpvDdZfYJBuYFDFNeeI=
+			/PDA8ofoL8CT/569INi170Ony5Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			uHStPPTYaxxbu2GGIarjdX+CRd+yanvUfY3rq1RkWVs=
+			cOxokHTm+wspG83vbz8mnq/4ZNfQ1ZsCOX+wdE/q364=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

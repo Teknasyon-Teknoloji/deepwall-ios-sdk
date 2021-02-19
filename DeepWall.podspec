@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
 
   s.name = 'DeepWall'
-  s.version = '2.0.0'
+  s.version = '2.1.0'
   s.summary = 'End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases'
   s.description = <<-DESC
   End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases...
   DESC
 
   s.homepage = 'https://teknasyon.com'
-  s.license = { :type => 'Commercial', :file => 'License' }
+  s.license = { :type => 'MIT', :file => 'License' }
   s.authors = { 'Teknasyon' => 'https://teknasyon.com' }
 
   s.source = { :git => 'https://github.com/Teknasyon-Teknoloji/deepwall-ios-sdk.git', :tag => s.version }
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   
 
-  s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport'
+  s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport', 'AppsFlyerLib'
   s.vendored_frameworks =
 'Frameworks/Dependencies/Adjust.framework',
 'Frameworks/Dependencies/AFNetworking.framework',
@@ -48,6 +48,7 @@ Pod::Spec.new do |s|
 'Frameworks/Dependencies/SPTPersistentCache.framework',
 'Frameworks/Dependencies/UICKeyChainStore.framework',
 'Frameworks/Dependencies/yoga.framework',
+'Frameworks/Dependencies/AppsFlyerLib.framework',
 'Frameworks/AttributionAgent.xcframework',
 'Frameworks/DeviceInfoAgent.xcframework',
 'Frameworks/EventServiceProvider.xcframework',
