@@ -10,11 +10,11 @@
 /// DeepWall environment style for paywalls
 typedef NS_ENUM(NSInteger, DeepWallEnvironmentStyle) {
 	/// DeepWall automatic environment style based on system
-	DeepWallEnvironmentStyleAutomatic = 0,
+	DeepWallEnvironmentStyleAutomatic = 999,
 	
 	/// DeepWall light environment style
-	DeepWallEnvironmentStyleLight = 1,
+	DeepWallEnvironmentStyleLight = 0,
 	
 	/// DeepWall dark environment style
-	DeepWallEnvironmentStyleDark = 2,
+	DeepWallEnvironmentStyleDark = 1,
 };
