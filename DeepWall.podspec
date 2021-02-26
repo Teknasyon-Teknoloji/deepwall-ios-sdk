@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
 
   s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport', 'AppsFlyerLib'
   s.vendored_frameworks =
-'Frameworks/Dependencies/Adjust.framework',
 'Frameworks/Dependencies/AFNetworking.framework',
 'Frameworks/Dependencies/CoreModules.framework',
 'Frameworks/Dependencies/cxxreact.framework',
@@ -48,6 +47,7 @@ Pod::Spec.new do |s|
 'Frameworks/Dependencies/SPTPersistentCache.framework',
 'Frameworks/Dependencies/UICKeyChainStore.framework',
 'Frameworks/Dependencies/yoga.framework',
+'Frameworks/Dependencies/AdjustSdk.framework',
 'Frameworks/Dependencies/AppsFlyerLib.framework',
 'Frameworks/AttributionAgent.xcframework',
 'Frameworks/DeviceInfoAgent.xcframework',

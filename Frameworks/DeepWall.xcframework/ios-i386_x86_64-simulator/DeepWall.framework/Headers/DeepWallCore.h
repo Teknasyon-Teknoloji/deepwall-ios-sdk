@@ -92,19 +92,11 @@ NS_SWIFT_NAME(DeepWall)
 /// Closes paywall screen
 - (void)closePaywall;
 
-///// Request app tracking screen for showing app tracking screens.
-//- (void)requestAppTrackingWithAction:(NSString *)action inView:(UIViewController *)view NS_SWIFT_NAME(requestAppTracking(action:in:));
-//
-///// Request app tracking screen for showing app tracking screens.
-//- (void)requestAppTrackingWithAction:(NSString *)action inView:(UIViewController *)view extraData:(nullable DeepWallExtraDataType)extraData NS_SWIFT_NAME(requestAppTracking(action:in:extraData:));
-
-
 /// Hide loading indicator from paywall screen
 - (void)hidePaywallLoadingIndicator;
 
 /// Validates receipt for type
 - (void)validateReceiptForType:(PloutosValidationType)type;
-// TODO: DeepWallReceiptValidationType!
 
 #pragma mark - Event Handling
 
