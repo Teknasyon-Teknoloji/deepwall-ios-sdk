@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'DeepWall'
-  s.version = '2.1.1'
+  s.version = '2.1.2'
   s.summary = 'End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases'
   s.description = <<-DESC
   End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases...
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   
 
-  s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport', 'AppsFlyerLib'
+  s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport'
   s.vendored_frameworks =
 'Frameworks/Dependencies/AFNetworking.framework',
 'Frameworks/Dependencies/CoreModules.framework',
@@ -47,13 +47,15 @@ Pod::Spec.new do |s|
 'Frameworks/Dependencies/SPTPersistentCache.framework',
 'Frameworks/Dependencies/UICKeyChainStore.framework',
 'Frameworks/Dependencies/yoga.framework',
-'Frameworks/Dependencies/AdjustSdk.framework',
-'Frameworks/Dependencies/AppsFlyerLib.framework',
 'Frameworks/AttributionAgent.xcframework',
 'Frameworks/DeviceInfoAgent.xcframework',
 'Frameworks/EventServiceProvider.xcframework',
 'Frameworks/Ploutos.xcframework',
 'Frameworks/PurchaseKit.xcframework',
 'Frameworks/DeepWall.xcframework'
+
+s.dependency 'Adjust', '~> 4.26'
+s.dependency 'AppsFlyerFramework', '~> 6.2'
+  
 
 end
