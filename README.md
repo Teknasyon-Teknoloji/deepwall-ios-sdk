@@ -213,6 +213,9 @@ DeepWall posts some various events depending on ....
 	- Parameters:
 		- DeepWallExtraDataType model
 
+- `deepWallATTStatusChanged`
+	- ATT status changed event
+
 
 #### Usage Example
 
