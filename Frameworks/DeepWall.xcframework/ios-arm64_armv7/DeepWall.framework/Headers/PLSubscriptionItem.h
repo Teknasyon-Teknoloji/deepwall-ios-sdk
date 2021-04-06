@@ -54,24 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-/*
- {
-
-
-id = 5;
-inGracePeriod = 0;
-inPremiumPeriod = 1;
-inTrialPeriod = 0;
-isActive = 1;
-isRefunded = 0;
-productCode = "com.fundev.photoedit.autopremium.2months";
-productProvider = apple;
-storeOrderId = 1000000526300028;
-}
- */
-
-
 /// JSONValueTransformer
 @interface JSONValueTransformer (CustomTransformer)
 @end
