@@ -9,8 +9,10 @@
 #import "DeepWallCountry.h"
 #import "DeepWallLanguage.h"
 #import "DeepWallEnvironmentStyle.h"
-#import <Ploutos/Ploutos.h>
-#import <DeviceInfoAgent/DeviceInfoAgent.h>
+#import "Ploutos.h"
+#import "DeviceInfoAgent.h"
+#import "PWall.h"
+#import "EventHub.h"
 
 /// Typealias for advertise attributions
 typedef NSDictionary<NSString *, NSString *> * DWAdvertiseAttributions;
@@ -78,6 +80,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Internal
 - (PloutosUserProperties *)toPloutosProps;
+
+/// Internal
+- (PWallUserProperties *)toPWallProps;
+
+/// Internal
+- (EventHubUserProperties *)toEventHubProps;
 
 @end
 

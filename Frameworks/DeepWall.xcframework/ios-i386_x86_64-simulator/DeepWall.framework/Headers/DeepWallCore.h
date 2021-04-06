@@ -10,7 +10,7 @@
 #import "DeepWallConfig.h"
 #import "DeepWallUserProperties.h"
 #import "DeepWallNotifierDelegate.h"
-#import <AttributionAgent/AttributionAgent.h>
+#import "AttributionAgent.h"
 
 /// Typealias for extra data transfers
 typedef NSDictionary* DeepWallExtraDataType;
@@ -91,6 +91,15 @@ NS_SWIFT_NAME(DeepWall)
 
 /// Closes paywall screen
 - (void)closePaywall;
+
+/// Request app tracking screen for showing app tracking screens.
+- (void)requestAppTrackingWithAction:(NSString *)action inView:(UIViewController *)view NS_SWIFT_NAME(requestAppTracking(action:in:)) API_AVAILABLE(ios(14));
+
+/// Request app tracking screen for showing app tracking screens.
+- (void)requestAppTrackingWithAction:(NSString *)action inView:(UIViewController *)view extraData:(nullable DeepWallExtraDataType)extraData NS_SWIFT_NAME(requestAppTracking(action:in:extraData:)) API_AVAILABLE(ios(14));
+
+/// Sends ExtraData to active paywall
+- (void)sendExtraDataToPaywall:(DeepWallExtraDataType)extraData;
 
 /// Hide loading indicator from paywall screen
 - (void)hidePaywallLoadingIndicator;

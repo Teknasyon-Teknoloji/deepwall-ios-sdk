@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Error code info
 @property (nonatomic, strong) NSString *errorCode;
 
+/// Test page id
+@property (nonatomic, nullable) NSString *actionName;
+
 
 /// Internal
 - (instancetype)initWithPageId:(NSInteger)pageId reason:(NSString *)reason errorCode:(NSString *)errorCode;

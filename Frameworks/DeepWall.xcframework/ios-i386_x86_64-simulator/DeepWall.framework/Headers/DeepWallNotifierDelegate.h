@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <EventServiceProvider/EventServiceProvider.h>
+#import "EventServiceProvider.h"
 #import "DeepWallPaywallResponseFailedModel.h"
 #import "DeepWallPaywallNotOpenedInfoModel.h"
 #import "DeepWallPaywallOpenedInfoModel.h"
 #import "DeepWallPaywallPurchasingProduct.h"
-#import <Ploutos/Ploutos.h>
-#import <PurchaseKit/PurchaseKit.h>
+#import "Ploutos.h"
+#import "PurchaseKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -75,6 +75,10 @@ typedef DeepWallPaywallOpenedInfoModel* DeepWallPaywallClosedInfoModel;
 
 /// DeepWall paywall restore failed event
 - (void)deepWallPaywallRestoreFailed:(DeepWallRestoreFailedModel)event;
+
+/// DeepWall ATT status changed event
+- (void)deepWallATTStatusChanged;
+
 
 @end
 
