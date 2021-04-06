@@ -73,7 +73,7 @@ DeepWall need to know following user properties for targeting.
 		- `dark`: Dark appearance
  - Debug Advertise Attributions: `DeepWallAdvertiseAttributions`
 	 - Advertise attribution info for debugging purposes.
-	 - Usage: `let attribution = ["debug_attribution", "debug_campaign_attribution"]`
+	 - Usage: `let attribution = ["debug_attribution: "debug_campaign_attribution"]`
 
 **Important:**
 > You must call `setUserProperties` method before requesting any paywall.
@@ -104,7 +104,7 @@ You could use `requestPaywall` method with `action` parameter for showing paywal
 
 DeepWall.shared.requestPaywall(action: "{ACTION_KEY}", in: self)
 ```
-Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [‎dashboard](https://console.deepwall.com).
+Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [dashboard](https://console.deepwall.com).
 
 #### Sending Extra Data
 
@@ -126,6 +126,17 @@ You could use `closePaywall` method to close paywalls.
 ```swift
 DeepWall.shared.closePaywall()
 ```
+
+#### Requesting ATT Prompts
+
+You could use `requestAppTracking` method with `action` parameter for showing ATT prompts.
+```swift
+// SomeUIViewController.swift
+
+DeepWall.shared.requestAppTracking(action: "{ACTION_KEY}", in: self)
+```
+Replace `{ACTION_KEY}` with your related action key. You can find or create action keys in your [dashboard](https://console.deepwall.com).
+
 
 ### Event Handling
 
@@ -201,6 +212,9 @@ DeepWall posts some various events depending on ....
 	- Extra data received event
 	- Parameters:
 		- DeepWallExtraDataType model
+
+- `deepWallATTStatusChanged`
+	- ATT status changed event
 
 
 #### Usage Example

@@ -19,11 +19,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// Reason info
 @property (nonatomic, strong) NSString *reason;
 
-/// Internal
-- (instancetype)initWithErrorEnum:(DeepWallError)errorEnum;
+/// Action name
+@property (nonatomic, strong) NSString *actionName;
+
+/// Test page id
+@property (nonatomic, nullable) NSNumber *testPageId;
 
 /// Internal
-- (instancetype)initWithErrorCode:(NSString *)errorCode reason:(NSString *)reason;
+- (instancetype)initWithErrorEnum:(DeepWallError)errorEnum actionName:(NSString *)actionName;
+
+/// Internal
+- (instancetype)initWithErrorCode:(NSString *)errorCode reason:(NSString *)reason actionName:(NSString *)actionName;
 
 @end
 

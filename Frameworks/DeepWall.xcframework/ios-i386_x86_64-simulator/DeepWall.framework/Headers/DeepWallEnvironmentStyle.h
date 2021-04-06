@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 /// DeepWall environment style for paywalls
-typedef NS_ENUM(NSInteger, DeepWallEnvironmentStyle) {
+typedef NS_ENUM(NSUInteger, DeepWallEnvironmentStyle) {
 	/// DeepWall automatic environment style based on system
 	DeepWallEnvironmentStyleAutomatic = 999,
 	

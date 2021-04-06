@@ -4,6 +4,39 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AccessibilityResources.bundle/Info.plist</key>
+		<data>
+		0CwpIlbvbo+YX9O5302L0g6U+os=
+		</data>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeDirectory</key>
+		<data>
+		5V7zHSFZ+Zo4UpgW1qrXcbAsGds=
+		</data>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		CXduXibQo5U4WkGarNHyt6Tm11U=
+		</data>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeResources</key>
+		<data>
+		RMh4lkG5vRpiauJ2diBFyeeUV/0=
+		</data>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
+		<key>AccessibilityResources.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X9E0vQNrSNVBkgqtimYht4o7EEg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Headers/DeepWall.h</key>
 		<data>
 		UHNvnrwzLgTv45kE6ZNTUKJJtLc=
@@ -14,7 +47,7 @@
 		</data>
 		<key>Headers/DeepWallCore.h</key>
 		<data>
-		KGstn9+4D3+yYL43zuWDmlSmSF8=
+		MdeqzUP8+XvIXdOwd2nHueWOpYQ=
 		</data>
 		<key>Headers/DeepWallCountry.h</key>
 		<data>
@@ -26,7 +59,7 @@
 		</data>
 		<key>Headers/DeepWallEnvironmentStyle.h</key>
 		<data>
-		vCqcD2P/QgySr0BpKbPKDE9ezA4=
+		1yd+8yoTat8dS9DSkQ5VdQGLtKY=
 		</data>
 		<key>Headers/DeepWallError.h</key>
 		<data>
@@ -42,11 +75,11 @@
 		</data>
 		<key>Headers/DeepWallNotifierDelegate.h</key>
 		<data>
-		oaYwWnrbYVH2jqACI2SQJjj17iU=
+		rTRGm6rbj2fHchvlRVCU/MaPFtY=
 		</data>
 		<key>Headers/DeepWallPaywallNotOpenedInfoModel.h</key>
 		<data>
-		k8QHqEtTPovc4MJ/OLU8cd4b92c=
+		NMW4vW+W+kozE4TUONO6rMd93gU=
 		</data>
 		<key>Headers/DeepWallPaywallOpenedInfoModel.h</key>
 		<data>
@@ -58,7 +91,7 @@
 		</data>
 		<key>Headers/DeepWallPaywallResponseFailedModel.h</key>
 		<data>
-		1p5p+RTCawaU7FYN2lbv3Re3peo=
+		x92l0cuEGSJ7VbXHA4xMtJEPHxg=
 		</data>
 		<key>Headers/DeepWallReceiptValidationType.h</key>
 		<data>
@@ -66,11 +99,11 @@
 		</data>
 		<key>Headers/DeepWallUserProperties.h</key>
 		<data>
-		/PDA8ofoL8CT/569INi170Ony5Y=
+		tIBMx5nVsQMXZCq8LuuyTOrddVo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DQ/GPBRQAIaOJyePxcIvfLOh8Nk=
+		8ahxglTBcKkBvyDHiNHJBOqyBww=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,6 +112,85 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AccessibilityResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0CwpIlbvbo+YX9O5302L0g6U+os=
+			</data>
+			<key>hash2</key>
+			<data>
+			yXMlaPXwx92xMaKAEJ9xM/1n4k2x2dC/vrN3PuHXshs=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5V7zHSFZ+Zo4UpgW1qrXcbAsGds=
+			</data>
+			<key>hash2</key>
+			<data>
+			e5BOubBOaedL8rdUCtDfJJnEBVNOBWFyFQ2lDaWG5U8=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OnX22wWFKRSOFN1+obRynMCeyXM=
+			</data>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CXduXibQo5U4WkGarNHyt6Tm11U=
+			</data>
+			<key>hash2</key>
+			<data>
+			p1IwLj11ONuqTSWyG1LuOKzEgaOVyoN1u0M5n7ggfZ8=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RMh4lkG5vRpiauJ2diBFyeeUV/0=
+			</data>
+			<key>hash2</key>
+			<data>
+			P78dgVuYBN6LjxMpLPm3PU7TVW+nH5E8LhE3e7gyZR4=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			</data>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
+		<key>AccessibilityResources.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X9E0vQNrSNVBkgqtimYht4o7EEg=
+			</data>
+			<key>hash2</key>
+			<data>
+			w1hfj69Kbb8WcP7mQdPFb//Z6XisMBZJwk6rwYndD5Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Headers/DeepWall.h</key>
 		<dict>
 			<key>hash</key>
@@ -105,11 +217,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KGstn9+4D3+yYL43zuWDmlSmSF8=
+			MdeqzUP8+XvIXdOwd2nHueWOpYQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			uxpa6G2OeWgO9Y5vfRtm/WEWRZVyuMuFyxK3BdB1ogY=
+			H7iAGzdJVnySKqeIR6/zMrYEiYhTE/qauA+t6OmJVPQ=
 			</data>
 		</dict>
 		<key>Headers/DeepWallCountry.h</key>
@@ -138,11 +250,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vCqcD2P/QgySr0BpKbPKDE9ezA4=
+			1yd+8yoTat8dS9DSkQ5VdQGLtKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			yalkqrIOUxBcchAfZgbOJyyu0UuUEbAGmlIqfOtsDyk=
+			P5CMRRwuQV3oHzthRqODZs66BEtOyhILSdNnc038hIQ=
 			</data>
 		</dict>
 		<key>Headers/DeepWallError.h</key>
@@ -182,22 +294,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oaYwWnrbYVH2jqACI2SQJjj17iU=
+			rTRGm6rbj2fHchvlRVCU/MaPFtY=
 			</data>
 			<key>hash2</key>
 			<data>
-			MB7hHdmSHzaf1VYe03tW+lej3V2koLUjo4/EI/m8/CQ=
+			jwCLv3wZ8gQK+wywgbS+pc3Mq5V7DxPqN878lfmeJ60=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallNotOpenedInfoModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k8QHqEtTPovc4MJ/OLU8cd4b92c=
+			NMW4vW+W+kozE4TUONO6rMd93gU=
 			</data>
 			<key>hash2</key>
 			<data>
-			aagws5L+NpzArgZYdCjVnoWTG+w/RW/vGoMpXA7mi14=
+			DpyxtNZXDjm890QXYqy5+ACh+ChYZYY7Ni6f6MmCUMQ=
 			</data>
 		</dict>
 		<key>Headers/DeepWallPaywallOpenedInfoModel.h</key>
@@ -226,11 +338,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1p5p+RTCawaU7FYN2lbv3Re3peo=
+			x92l0cuEGSJ7VbXHA4xMtJEPHxg=
 			</data>
 			<key>hash2</key>
 			<data>
-			eQiF/1AmHtcvmf6R8mQBITSax05mBlDuOJ3ZxFY2mls=
+			AQAXC3T89fN3Nh3l6LtL5fPXOtSFGsYr+zbhjaTxon0=
 			</data>
 		</dict>
 		<key>Headers/DeepWallReceiptValidationType.h</key>
@@ -248,11 +360,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/PDA8ofoL8CT/569INi170Ony5Y=
+			tIBMx5nVsQMXZCq8LuuyTOrddVo=
 			</data>
 			<key>hash2</key>
 			<data>
-			cOxokHTm+wspG83vbz8mnq/4ZNfQ1ZsCOX+wdE/q364=
+			6uBUcEmU07WMt4W7KodEcOvNdoZg5D4EQvmc4K8KH2A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

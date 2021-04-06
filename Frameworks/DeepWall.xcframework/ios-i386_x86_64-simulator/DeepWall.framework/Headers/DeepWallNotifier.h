@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <EventServiceProvider/EventServiceProvider.h>
+#import "EventServiceProvider.h"
 #import "DeepWallNotifierDelegate.h"
-#import <Ploutos/Ploutos.h>
+#import "Ploutos.h"
 
 /// DeepWall validate receipt result
 typedef PloutosValidateReceiptResult* DeepWallValidateReceiptResult;
