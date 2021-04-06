@@ -127,7 +127,7 @@ You could use `closePaywall` method to close paywalls.
 DeepWall.shared.closePaywall()
 ```
 
-#### Requesting ATT Prompts
+### Requesting ATT Prompts
 
 You could use `requestAppTracking` method with `action` parameter for showing ATT prompts.
 ```swift
