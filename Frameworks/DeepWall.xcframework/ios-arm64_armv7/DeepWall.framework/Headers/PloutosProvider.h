@@ -12,9 +12,6 @@ typedef NS_ENUM(NSUInteger, PloutosProvider) {
 	/// Ploutos provider for Apple purchases
 	PloutosProviderApple = 1,
 	
-	/// Ploutos provider for Zotlo purchases
-	PloutosProviderZotlo = 2,
-	
 	/// Ploutos provider for Unknown purchases
 	PloutosProviderUnknown = 990
 };
