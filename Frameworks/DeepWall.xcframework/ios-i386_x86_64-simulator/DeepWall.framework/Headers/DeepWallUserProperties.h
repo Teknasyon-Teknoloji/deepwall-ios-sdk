@@ -11,7 +11,6 @@
 #import "DeepWallEnvironmentStyle.h"
 #import "Ploutos.h"
 #import "DeviceInfoAgent.h"
-#import "PWall.h"
 #import "EventHub.h"
 
 /// Typealias for advertise attributions
@@ -80,9 +79,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Internal
 - (PloutosUserProperties *)toPloutosProps;
-
-/// Internal
-- (PWallUserProperties *)toPWallProps;
 
 /// Internal
 - (EventHubUserProperties *)toEventHubProps;
