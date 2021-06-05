@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'DeepWall'
-  s.version = '2.2.1'
+  s.version = '2.3.0'
   s.summary = 'End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases'
   s.description = <<-DESC
   End-to-end solution for building, managing and maintaining profitable mobile apps offering in-app purchases...
