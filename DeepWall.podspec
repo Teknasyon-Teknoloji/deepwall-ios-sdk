@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   
   s.framework = 'SystemConfiguration', 'MobileCoreServices', 'UIKit', 'WebKit', 'StoreKit', 'CoreTelephony', 'AdSupport'
 
-  s.vendored_frameworks = 'Frameworks/Dependencies/react_native_video.framework','Frameworks/DeepWall.xcframework'
+  s.vendored_frameworks = 'Frameworks/DeepWall.xcframework'
 end
