@@ -20,13 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *id;
 
 /// StoreOrderId info
-@property (nonatomic, strong) NSString *storeOrderId;
+@property (nonatomic, strong, nullable) NSString<Optional> *storeOrderId;
 
 /// ProductCode info
-@property (nonatomic, strong) NSString *productCode;
+@property (nonatomic, strong, nullable) NSString<Optional> *productCode;
 
 /// ProductProvider info
-@property (nonatomic, strong, nullable) NSString *productProvider;
+@property (nonatomic, strong, nullable) NSString<Optional> *productProvider;
 
 /// productProvider enum info
 @property (nonatomic, readonly) PloutosProvider productProviderEnum;
@@ -52,7 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// InPremiumPeriod info
 @property (nonatomic) BOOL inPremiumPeriod;
 
+/// Price info
+@property (nonatomic, strong, nullable) NSNumber<Optional> *price;
+
 @end
+
 
 /// JSONValueTransformer
 @interface JSONValueTransformer (CustomTransformer)
