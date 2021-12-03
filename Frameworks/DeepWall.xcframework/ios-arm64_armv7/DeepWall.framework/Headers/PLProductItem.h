@@ -20,10 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *id;
 
 /// StoreOrderId info
-@property (nonatomic, strong) NSString *storeOrderId;
+@property (nonatomic, strong, nullable) NSString<Optional> *storeOrderId;
 
 /// ProductCode info
-@property (nonatomic, strong) NSString *productCode;
+@property (nonatomic, strong, nullable) NSString<Optional> *productCode;
 
 /// ProductProvider info
 @property (nonatomic, strong, nullable) NSString *productProvider;
@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// IsRefunded info
 @property (nonatomic) BOOL isRefunded;
+
+/// Price info
+@property (nonatomic, strong, nullable) NSNumber<Optional> *price;
 
 @end
 
