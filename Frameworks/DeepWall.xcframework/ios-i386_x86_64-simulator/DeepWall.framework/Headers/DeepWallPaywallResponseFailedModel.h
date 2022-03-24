@@ -25,6 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// Test page id
 @property (nonatomic, nullable) NSNumber *testPageId;
 
+/// Test id info
+@property (nonatomic, strong, nullable) NSNumber *testId;
+
+/// Related test id info
+@property (nonatomic, strong, nullable) NSNumber *relatedTestId;
+
+/// Is Display info
+@property (nonatomic) BOOL isDisplay;
+
 /// Internal
 - (instancetype)initWithErrorEnum:(DeepWallError)errorEnum actionName:(NSString *)actionName;
 

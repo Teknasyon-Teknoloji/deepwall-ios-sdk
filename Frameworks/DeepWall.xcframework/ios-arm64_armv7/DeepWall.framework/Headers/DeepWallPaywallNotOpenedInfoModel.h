@@ -24,6 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// Test page id
 @property (nonatomic, nullable) NSString *actionName;
 
+/// Test id info
+@property (nonatomic, strong, nullable) NSNumber *testId;
+
+/// Related test id info
+@property (nonatomic, strong, nullable) NSNumber *relatedTestId;
+
+/// Is Display info
+@property (nonatomic) BOOL isDisplay;
 
 /// Internal
 - (instancetype)initWithPageId:(NSInteger)pageId reason:(NSString *)reason errorCode:(NSString *)errorCode;
