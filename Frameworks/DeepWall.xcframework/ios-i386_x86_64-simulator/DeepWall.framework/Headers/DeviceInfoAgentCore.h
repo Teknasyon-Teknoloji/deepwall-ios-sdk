@@ -23,10 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)requestForIpWithName:(NSString *)name url:(NSString *)url headers:(NSDictionary *)headers regexs:(NSDictionary *)regexs;
 
-/*
- public func requestForIp(name: String, url: URL, headers: [String: String], regexs: [String: String]) {
- */
-
 @end
 
 NS_ASSUME_NONNULL_END
