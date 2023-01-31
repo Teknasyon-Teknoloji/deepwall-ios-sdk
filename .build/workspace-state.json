@@ -1,0 +1,23 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "packageRef" : {
+          "identity" : "deepwall-ios-sdk_git",
+          "kind" : "root",
+          "location" : "/Users/osmanyildirim/Documents/Projects/Kairos/deepwall-ios-sdk_GIT",
+          "name" : "deepwall-ios-sdk_GIT"
+        },
+        "path" : "/Users/osmanyildirim/Documents/Projects/Kairos/deepwall-ios-sdk_GIT/Frameworks/DeepWall.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "DeepWall"
+      }
+    ],
+    "dependencies" : [
+
+    ]
+  },
+  "version" : 5
+}
