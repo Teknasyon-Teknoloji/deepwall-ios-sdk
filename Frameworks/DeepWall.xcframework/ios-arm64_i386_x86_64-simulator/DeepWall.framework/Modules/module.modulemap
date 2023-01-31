@@ -1,0 +1,6 @@
+framework module DeepWall {
+  umbrella header "DeepWall.h"
+
+  export *
+  module * { export * }
+}
